@@ -63,7 +63,7 @@
             y: 100,
             w: line.w,
             h: 200,
-            speed: 5,
+            speed: 4,
             _move: function() {
                 if (this.y + this.h / 2 < ball.y + ball.r) {
                     this.y += this.speed
@@ -73,7 +73,7 @@
                 this.y = ball.y
             },
             speedUp: function () {
-                this.speed += 2
+                this.speed += 1
             },
             draw: function() {
                 canvasCtx.fillStyle = "#ffffff"
@@ -84,8 +84,8 @@
         }
 
         const score = {
-            human: 1,
-            computer: 2,
+            human: 0,
+            computer: 0,
             increaseHuman: function() {
                 this.human++
             },
